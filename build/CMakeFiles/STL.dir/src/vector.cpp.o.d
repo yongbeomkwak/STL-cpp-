@@ -1,5 +1,6 @@
-CMakeFiles/STL.dir/main.cpp.o: \
-  /Users/yongbeomkwak/Desktop/PLPlayGround/CPPSTL/main.cpp \
+CMakeFiles/STL.dir/src/vector.cpp.o: \
+  /Users/yongbeomkwak/Desktop/PLPlayGround/CPPSTL/src/vector.cpp \
+  /Users/yongbeomkwak/Desktop/PLPlayGround/CPPSTL/./include/vector.h \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/iostream \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/__config \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk/usr/include/pthread.h \
@@ -226,5 +227,4 @@ CMakeFiles/STL.dir/main.cpp.o: \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk/usr/include/_types/_nl_item.h \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/__bsd_locale_defaults.h \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/bitset \
-  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/__bit_reference \
-  /Users/yongbeomkwak/Desktop/PLPlayGround/CPPSTL/./include/vector.h
+  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/__bit_reference
