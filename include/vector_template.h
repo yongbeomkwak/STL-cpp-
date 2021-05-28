@@ -2,7 +2,7 @@
 #define __VECTOR_H__
 #include <iostream>
 using namespace std;
-namespace kvector{
+namespace kstl{
     template<typename T=int>
     class Vector{
         T * base; //요소를 보관할 저장소
@@ -15,9 +15,12 @@ namespace kvector{
                 Iterator(T *pos);
                 T operator *(void){
                     return *pos;
-                }; //해당 위치에 대한 저장값 반환 연산자
-                int operator -(const Iterator &iter);
-                Iterator &operator ++();
+                } //해당 위치에 대한 저장값 반환 연산자
+                int operator -(const Iterator &iter){
+                }
+                Iterator &operator ++(void){//forward operator
+    
+                }
                 const Iterator operator ++(int);
                 bool operator !=(const Iterator &iter);
                 bool operator ==(const Iterator &iter);

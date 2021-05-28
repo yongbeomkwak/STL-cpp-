@@ -2,7 +2,7 @@
 #define __VECTOR_H__
 #include <iostream>
 using namespace std;
-namespace kvector
+namespace kstl
 {
     template <typename T = int>
     class Vector
@@ -50,7 +50,7 @@ namespace kvector
             }
             Iterator &operator+(int n)
             {
-                Iterator tmp(this->pos);
+                Iterator tmp(*this);//얕은 복사
                 tmp.pos+=n;
                 return tmp;
               
@@ -67,9 +67,10 @@ namespace kvector
         }
         ~Vector()
         {
+            cout <<"소멸자 호출"<<endl;
             if (base)
             { //할당 되어있는 상태면
-                delete[] base;
+                delete[] base; //전체 해제 
             }
         }
         void push_back(size_t cnt, T t)
@@ -92,9 +93,9 @@ namespace kvector
                 {
                     temp[i] = base[i]; //기존 저장소에 보관된 요소를 새로운 저장소에 복사
                 }
-                delete[] base; //기존 저장소 소멸
+                delete[] base; //기존 저장소 시작 주소 해제 
             }
-            base = temp;           //base에  새로운 저장소를 대입
+            base = temp;           //base에  새로운 저장소 시작 주소 할당 
             bCapacity = ncapacity; //새로운 저장소 용량 대입
         }
         void resize(size_t nsize)
@@ -103,21 +104,25 @@ namespace kvector
             {
                 reserve(nsize); //저장된 용량을 늘려줌
             }
-            //새롭게 늘어난 요소 개수만큼 기본값 0을 보관
+            //새롭게 늘어난 요소 개수만큼 기본값 0을 보관, nsize-Bsize 만큼 반복
             for (size_t i = bSize; i < nsize; i++)
             {
                 insert(end(), 0);
             }
+            //사이즈 변환은 안함 원래 있던 갯수가 실제 사이즈 이기 때문에 
         }
         void insert(Iterator at, T t)
         {
-            size_t index = at - base; //넣고 싶은 위치 at을, base를 기준으로 상대 위치를 구함 ,여가소 Iterator의 operator - 쓰임
+            size_t index = at - base; //넣고 싶은 위치 at을, base(시작점)를 기준으로 상대 위치를 구함 ,여가소 Iterator의 operator - 쓰임
             if (bSize == bCapacity)   //용량이 꽉찼다면
             {
                 reserve(bCapacity + 10); //용량 10 늘려줌
             }
-            //보관할 위치 뒤에 있는 요소들 뒤로 한칸씩 이동
-            for (size_t i = bSize; i > index; i++)
+            // 0 1 2 3
+            // 1 2 3 4
+            // 1 2 2 3 4
+            // size와 index 혼동x, 요소 4개면 마지막 index=3,사이즈는 4임
+            for (size_t i = bSize; i > index; i--) 
             {
                 base[i] = base[i-1]; //뒤로 이동, 2->3, 3->4 ...
             }
@@ -131,7 +136,7 @@ namespace kvector
             //삭제할 위치 뒤에 요소들 한칸씩 앞으로 이동
             for (size_t i = index + 1; i < bSize; i++)
             {
-                base[i] = base[i];
+                base[i-1] = base[i];
             }
             bSize--; //사이즈 감소
         }
