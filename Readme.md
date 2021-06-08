@@ -21,4 +21,8 @@
     -   resize 밒 size는 사용 가능 
 -   원형 리스트
     -   이중 리스트에서 마지막 노드가 처음 시작 노드를 알 때 원형 리스트라 함
-        
+
+### 3.Stack
+- struct안 자기 자신을 멤버변수로 하는 법
+- calloc 과 malloc 그리고 free,
+- calloc 과 malloc시 반드시 C++은 포인터 형으로 형변환 해줘야함 

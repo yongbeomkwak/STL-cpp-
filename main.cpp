@@ -1,6 +1,7 @@
 #include <iostream>
 #include <vector.h>
 #include <list.h>
+#include <stack.h>
 using namespace std;
 using namespace kstl;
 
@@ -25,33 +26,42 @@ int main(int, char **)
     // cout << (it != e_it) << endl; // 참 1
     // it++; //end
     // cout << (it == e_it) << endl; //참 1
-    // cout << (it != e_it) << endl; //거짓
+    // cout << (it != e_it) << endl; //거짓 
+    // List<char> li;
+    // li.push_back('A');
+    // li.push_back('B');
+    // li.push_back('C');
+    // li.push_back('E');
+    // li.push_back('F');
+    // printf("%d\n", li.size()); //5 
+    // List<char>::Iterator it = li.begin();
+    // for (size_t i = 0; i < li.size(); i++)
+    // {
+    //     cout << *it << endl;
+    //     if (i == 3) // it가 E를 가르킬 때 D 넣음 , E 앞에 D를 넣음
+    //     {
+    //         li.insert(it, 'D');
+    //     }
+    //     it++;
+    // }
+    // // A B C E F
+    // cout << "##########" << endl;
+    // printf("%d\n", li.size()); //6
+    // List<char>::Iterator itt = li.begin();
+    // for (size_t i = 0; i < li.size(); i++)
+    // {
+    //     cout << *itt << endl;
+    //     itt++;
+    // }
+    // // A B C D E F
+    Pstack Stack=createStack();
+    push(Stack,0);
+    push(Stack,1);
+    push(Stack,2);
+    push(Stack,3);
+    for(int i=size(Stack);i>0;i--)
+    {
+        cout << pop(Stack) <<endl;
+    }
 
-    List<char> li;
-    li.push_back('A');
-    li.push_back('B');
-    li.push_back('C');
-    li.push_back('E');
-    li.push_back('F');
-    printf("%d\n", li.size()); //5 
-    List<char>::Iterator it = li.begin();
-    for (size_t i = 0; i < li.size(); i++)
-    {
-        cout << *it << endl;
-        if (i == 3) // it가 E를 가르킬 때 D 넣음 , E 앞에 D를 넣음
-        {
-            li.insert(it, 'D');
-        }
-        it++;
-    }
-    // A B C E F
-    cout << "##########" << endl;
-    printf("%d\n", li.size()); //6
-    List<char>::Iterator itt = li.begin();
-    for (size_t i = 0; i < li.size(); i++)
-    {
-        cout << *itt << endl;
-        itt++;
-    }
-    // A B C D E F
 }

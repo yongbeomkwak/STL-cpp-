@@ -228,4 +228,5 @@ CMakeFiles/STL.dir/main.cpp.o: \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/bitset \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/__bit_reference \
   /Users/yongbeomkwak/Desktop/PLPlayGround/CPPSTL/./include/vector.h \
-  /Users/yongbeomkwak/Desktop/PLPlayGround/CPPSTL/./include/list.h
+  /Users/yongbeomkwak/Desktop/PLPlayGround/CPPSTL/./include/list.h \
+  /Users/yongbeomkwak/Desktop/PLPlayGround/CPPSTL/./include/stack.h

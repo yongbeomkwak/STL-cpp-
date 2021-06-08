@@ -230,8 +230,11 @@ CMakeFiles/STL.dir/main.cpp.o: ../main.cpp \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/bitset \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/__bit_reference \
   ../include/vector.h \
-  ../include/list.h
+  ../include/list.h \
+  ../include/stack.h
 
+
+../include/stack.h:
 
 /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/__bit_reference:
 
