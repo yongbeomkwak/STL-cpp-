@@ -13,7 +13,7 @@
 -   template 및 default argument 유심히 보기 
 
 ### 2.List
--   struct 생성자 확인하기 (node)
+-   structure 생성자 확인하기 (node)
 -   이중 리스트
     -   자신의 이전과 다음의 노드 위치를 알고 있음
     -   operator [] 사용불가, 연속적인 메모리 구조가 아니기 때문에
@@ -21,3 +21,4 @@
     -   resize 밒 size는 사용 가능 
 -   원형 리스트
     -   이중 리스트에서 마지막 노드가 처음 시작 노드를 알 때 원형 리스트라 함
+        
