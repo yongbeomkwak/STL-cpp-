@@ -8,7 +8,7 @@ include(CTest)
 enable_testing()
 include_directories(${HEADER_INCLUDE_PATH})
 
-add_executable(STL main.cpp )
+add_executable(STL main.cpp)
 
 set(CPACK_PROJECT_NAME ${PROJECT_NAME})
 set(CPACK_PROJECT_VERSION ${PROJECT_VERSION})
