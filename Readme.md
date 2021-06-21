@@ -26,3 +26,34 @@
 - struct안 자기 자신을 멤버변수로 하는 법
 - calloc 과 malloc 그리고 free,
 - calloc 과 malloc시 반드시 C++은 포인터 형으로 형변환 해줘야함 
+
+### 4.queue
+-   <queue> header file
+-   템플릿 선언 부분을 보겠습니다.
+
+    -   0. template 
+    -   template < typename T,
+           typename Container = vector<T>,
+                typename Compare = less<typename Container::velue_type> >
+            class priority_queue;
+
+---
+
+    -   1.  기본 생성자 형식 
+    -   priority_queue < [Data Type] > [변수이름];
+    -   ex) priority_queue<int> pq;
+
+---
+    -   2.  내부 컨테이너 변경 
+    -   priority_queue < [Data Type], [Container Type] > [변수이름];
+    -   ex) priority_queue<int, deque<int> > pq;
+
+---
+    -   3.  정렬 기준 변경 
+    -   priority_queue < [Data Type], [Container Type], [정렬기준] > [변수이름];
+
+    -   ex) priority_queue<int , vector<int>, greater<int> > pq;
+
+    -  4.정렬 기준(함수가아닌 클래스 or 구조체)
+    -  보통 greater<type> -> 오름 차순, less<type> ->내림차순
+- 커스텀 정렬 기준 만들기 참고:[here](https://travelbeeee.tistory.com/126)
